@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Mercado</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Poppins|ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+      <script src="js/csi.min.js"></script><!---HTML DENTRO DE HTML--> 
+  </head>
+  <body>
+    <div class="container-fluid">
+        <!--NAVBAR-->
+         <div data-include="navbar.html"></div>
+        <!-- HOME-->   
+        <div id="home">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <img src="img/home/promo.svg"alt="">
+                </div>
+                <div class="col-md-6 col-sm-12" id="home_2">
+                    <br><br><br><br><br><br>
+                    <p id="titulo_home">Instala nuestra App y llevate tu primer pedido con envio GRATIS</h4><br><br>
+                    <!-- BOTONCITO  MODAL  -->   
+                    <button class="btn btn-mejorado-2" data-toggle="modal" data-target="#Modal" >Iniciar Sesión</button>
+                    <button class="btn btn-mejorado" onclick="window.open('https://play.google.com/store/apps?hl=es_419','_blank');">Descargar APP</button>
+                 </div>
+                 <!-- Modal -->
+                <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                     <!---  <div class="modal-header"></div> -->
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class=" nav-link" id="profile-tab" data-toggle="tab" href="#registro" role="tab" aria-controls="registro" aria-selected="false">Registro</a>
+                          </li>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </ul>
+                        
+                      <div class="modal-body text-left">
+                        <div class="tab-content" id="myTabContent">
+                          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login">
+                            <label>Usuario:</label>
+                            <input type="text" class="form-control">
+                            <label>Contraseña:</label>
+                            <input type="password" class="form-control"><br>
+                            <button type="button" class="btn btn-mejorado">Iniciar Sesión</button>
+                          </div>
+                          <div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="profile-tab">
+                            <label>Nombres:</label>
+                            <input type="text" class="form-control">
+                            <label>Apellido Paterno:</label>
+                            <input type="text" class="form-control">
+                            <label>Apellido Materno:</label>
+                            <input type="text" class="form-control">
+                            <label>Correo:</label>
+                            <input type="email" class="form-control">
+                            <label>Contraseña:</label>
+                            <input type="password" class="form-control">
+                            <label>Confirmar contraseña:</label>
+                            <input type="password" class="form-control"><br>
+                            <button type="button" class="btn btn-mejorado data-dismiss="modal">Registrarse</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!---<div class="modal-footer">
+                      </div>--->
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+           <!-- CATEGORIA SECCION 1--> 
+        <h3 class="cabecera" id="categorias">Categorías</h3>
+        <div class="row category">
+          <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_book()" onmouseout="fuera_book()">
+              <a href="subcategorias.html" class="categoria_link"> 
+                  <img src="img/categorias/rosado/book.png" id="book" alt="">
+                  <img src="img/categorias/blanco/libro.png" id="book_2" style="display: none;" alt="">
+                  <p id="p_book">Libros y Revistas</p>
+              </a>
+          </div>
+          <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_phone()" onmouseout="fuera_phone()">
+              <a href="subcategorias.html" class="categoria_link"> 
+                  <img src="img/categorias/rosado/smartphone.png" id="phone" alt="">
+                  <img src="img/categorias/blanco/telefono.png" id="phone_2" style="display:none" alt="">
+                  <p id="p_phone">Smartphone</p>
+                </a>
+          </div>
+          <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_tv()" onmouseout="fuera_tv()">
+              <a href="subcategorias.html" class="categoria_link"> 
+                  <img src="img/categorias/rosado/screen.png" id="tv" alt="">
+                  <img src="img/categorias/blanco/smartv.png" id="tv_2" style="display: none;" alt="">
+                  <p id="p_tv">Smart TV</p>
+              </a>
+          </div>
+          <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_games()" onmouseout="fuera_games()">
+              <a href="subcategorias.html" class="categoria_link"> 
+                  <img src="img/categorias/rosado/joystick.png" id="games" alt="">
+                  <img src="img/categorias//blanco/palanca-de-mando.png" id="games_2" style="display: none;" alt="">
+                  <p id="p_games">Consolas y VideoJuegos</p>
+              </a>
+          </div>
+          <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_audio()" onmouseout="fuera_audio()">
+              <a href="subcategorias.html" class="categoria_link">  
+                  <img src="img/categorias/rosado/audio.png" id="audio" alt="">
+                  <img src="img/categorias/blanco/audio.png" id="audio_2" style="display: none;" alt="">
+                  <p id="p_audio">Electronica y Audio</p>
+              </a>
+          </div>
+          <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_electrodomesticos()" onmouseout="fuera_electrodomesticos()">
+              <a href="subcategorias.html" class="categoria_link"> 
+                  <img src="img/categorias/rosado/dishwasher.png" id="electro" alt="">
+                  <img src="img/categorias/blanco/electrodomesticos.png" id="electro_2" style="display: none;" alt="">
+                  <p id="p_electro">Electrodomésticos</p>
+              </a>
+          </div>
+        </div>
+           <!-- CATEGORIA SECCION 2--> 
+        <div class="row category">
+          <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_bebes()" onmouseout="fuera_bebes()">
+              <a href="subcategorias.html" class="categoria_link"> 
+                    <img src="img/categorias/rosado/fashion.png" id="bebes" alt="">
+                    <img src="img/categorias/blanco/ropa_bebe.png" id="bebes_2" style="display: none;" alt="">
+                    <p id="p_bebes">Bebés</p>
+              </a>
+          </div>
+          <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_joyas()" onmouseout="fuera_joyas()">
+                <a href="subcategorias.html" class="categoria_link">    
+                    <img src="img/categorias/rosado/smartwatch.png" id="joyas" alt="">
+                    <img src="img/categorias/blanco/reloj-inteligente.png" id="joyas_2" style="display: none;" alt="">
+                    <p id="p_joyas">Relojes y Joyas</p>
+                </a>
+          </div>
+          <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_makeup()" onmouseout="fuera_makeup()">
+                <a href="subcategorias.html" class="categoria_link"> 
+                    <img src="img/categorias/rosado/makeup.png" id="makeup" alt="">
+                    <img src="img/categorias/blanco/maquillaje.png" id="makeup_2" style="display: none;" alt="">
+                    <p id="p_makeup">Belleza y Cuidado Personal</p>
+                </a>
+           </div>
+           <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_sport()" onmouseout="fuera_sport()">
+                <a href="subcategorias.html" class="categoria_link"> 
+                    <img src="img/categorias/rosado/sport.png" id="sport" alt="">
+                    <img src="img/categorias/blanco/pelota.png" id="sport_2" style="display: none;" alt="">
+                    <p id="p_sport">Deportes y Fitness</p>
+                </a>
+            </div>
+            <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_musica()" onmouseout="fuera_musica()">
+                <a href="subcategorias.html" class="categoria_link"> 
+                  <img src="img/categorias/rosado/violin.png" id="musica" alt="">
+                  <img src="img/categorias/blanco/violin.png" id="musica_2" style="display: none;" alt="">
+                  <p id="p_musica">Instrumentos Musicales</p>
+                </a>
+            </div>
+            <div class="col-md-2 col-sm-4 col-4 efecto_categoria" onmousemove="dentro_herramientas()" onmouseout="fuera_herramientas()">
+                <a href="subcategorias.html" class="categoria_link">  
+                    <img src="img/categorias/rosado/support.png" id="herramientas" alt="">
+                    <img src="img/categorias/blanco/herramientas.png" id="herramientas_2" style="display: none;" alt="">
+                    <p id="p_herramientas">Herramientas y Construcción</p>
+                </a>
+            </div>
+        </div>
+        <!-- OFERTAS--> 
+       <div id="ofertas">
+       <h4 id="titulo_oferta">OFERTAS</h4>
+       <div class="row ofertas">
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12 zoom">
+            <div class="card">
+              <img src="img/oferta1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <strong><p>Computador Gamer MSI</p></strong>
+                <h2> <span class="badge badge-propia">$329.990</span></h2>
+                <a href="producto.html"  target="_blank"><button class="btn btn-success">Comprar</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12 zoom">
+            <div class="card">
+              <img src="img/oferta1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <strong><p>Computador Gamer MSI</p></strong>
+                <h2> <span class="badge badge-propia">$329.990</span></h2>
+                <a href="producto.html"  target="_blank"><button class="btn btn-success col-md-12 col-sm-12 col-12">Comprar</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12  zoom">
+            <div class="card">
+              <img src="img/oferta1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <strong><p>Computador Gamer MSI</p></strong>
+                <h2> <span class="badge badge-propia">$329.990</span></h2>
+                <a href="producto.html"  target="_blank"><button class="btn btn-success col-md-12 col-sm-12 col-12">Comprar</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12 zoom">
+            <div class="card">
+              <img src="img/oferta1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <strong><p>Computador Gamer MSI</p></strong>
+                <h2> <span class="badge badge-propia">$329.990</span></h2>
+                <a href="producto.html"  target="_blank"><button class="btn btn-success col-md-12 col-sm-12 col-12">Comprar</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12 zoom">
+            <div class="card">
+              <img src="img/oferta1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <strong><p>Computador Gamer MSI</p></strong>
+                <h2> <span class="badge badge-propia">$329.990</span></h2>
+              <a href="producto.html"  target="_blank"><button class="btn btn-success col-md-12 col-sm-12 col-12">Comprar</button></a>  
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12 zoom">
+            <div class="card">
+              <img src="img/oferta1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <strong><p>Computador Gamer MSI</p></strong>
+                <h2> <span class="badge badge-propia">$329.990</span></h2>
+              <a href="producto.html"  target="_blank"><button class="btn btn-success col-md-12 col-sm-12 col-12">Comprar</button></a>  
+              </div>
+            </div>
+          </div>
+       </div>
+      <div class="row ofertas">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12 zoom">
+          <div class="card">
+            <img src="img/oferta1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <strong><p>Computador Gamer MSI</p></strong>
+              <h2> <span class="badge badge-propia">$329.990</span></h2>
+              <a href="producto.html"  target="_blank"><button class="btn btn-success col-md-12 col-sm-12 col-12">Comprar</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12 zoom">
+          <div class="card">
+            <img src="img/oferta1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <strong><p>Computador Gamer MSI</p></strong>
+              <h2> <span class="badge badge-propia">$329.990</span></h2>
+              <a href="producto.html"  target="_blank"><button class="btn btn-success col-md-12 col-sm-12 col-12">Comprar</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12 zoom">
+          <div class="card">
+            <img src="img/oferta1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <strong><p>Computador Gamer MSI</p></strong>
+              <h2> <span class="badge badge-propia">$329.990</span></h2>
+              <a href="producto.html"  target="_blank"><button class="btn btn-success col-md-12 col-sm-12 col-12">Comprar</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12 zoom">
+          <div class="card">
+            <img src="img/oferta1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <strong><p>Computador Gamer MSI</p></strong>
+              <h2> <span class="badge badge-propia">$329.990</span></h2>
+              <a href="producto.html"  target="_blank"><button class="btn btn-success col-md-12 col-sm-12 col-12">Comprar</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12 zoom">
+          <div class="card">
+            <img src="img/oferta1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <strong><p>Computador Gamer MSI</p></strong>
+              <h2> <span class="badge badge-propia">$329.990</span></h2>
+              <a href="producto.html"  target="_blank"><button class="btn btn-success col-md-12 col-sm-12 col-12">Comprar</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12 zoom">
+          <div class="card">
+            <img src="img/oferta1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <strong><p>Computador Gamer MSI</p></strong>
+              <h2> <span class="badge badge-propia">$329.990</span></h2>
+              <a href="producto.html"  target="_blank"><button class="btn btn-success col-md-12 col-sm-12 col-12">Comprar</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+       </div>
+        <!--MEDIO PAGO-->
+        <div id="medios_pago">
+          <div class="row medios_pago">
+            <div class="col-md-5 col-sm-12 col-12">
+              <img id="imagen_medios_pago" src="img/medios_pago/medios_pago.png"  width="90%" alt="">
+            </div>
+            <div class="col-md-6 col-sm-10 col-xs-12">
+              <h4 id="titulo_medios_pago">Medios de Pago</h4>
+              <div id="texto_medios_pago">
+              <h5><strong>Tarjetas de crédito</strong></h5>
+              <ul>
+                <li>Webpay</li>
+              </ul>
+              <h5><strong>Transferencias bancarias</strong></h5>
+              <ul>
+                <li>Khipu</li>
+                <li>Webpay</li>
+              </ul>
+              <h5><strong>Pago en efectivo</strong></h5>
+              <ul>
+                <li>Servipag</li>
+                <li>Caja vecina</li>
+              </ul>
+              <h5><strong>Pagos Internacionales</strong></h5>
+              <ul>
+                <li>Paypal</li>
+              </ul>
+              <p><i>*Compras protegidas con sitema seguro</i></p>
+            </div>
+          </div>
+          </div>
+        </div>
+        <!--REDES SOCIALES-->
+        <div data-include="footer.html"></div>
+      </div>
+      <script>
+
+        function dentro_book() {
+        document.getElementById("book").style.display = "none";
+        document.getElementById("book_2").style.display="inline-block";
+        document.getElementById("p_book").style.color="white";
+        document.getElementById("p_book").style.fontWeight="bolder";
+        document.getElementById("p_book").style.textDecoration="none";
+        
+        
+      }
+      function fuera_book() {
+        document.getElementById("book").style.display = "inline-block";
+        document.getElementById("book_2").style.display="none";
+        document.getElementById("p_book").style.color="#FF0076";
+        document.getElementById("p_book").style.fontWeight="bolder";
+      
+      }
+      function dentro_phone() {
+        document.getElementById("phone").style.display = "none";
+        document.getElementById("phone_2").style.display="inline-block";
+        document.getElementById("p_phone").style.color="white";
+        document.getElementById("p_phone").style.fontWeight="bolder";
+        document.getElementById("p_phone").style.textDecoration="none";
+      }
+      function fuera_phone() {
+        document.getElementById("phone").style.display = "inline-block";
+        document.getElementById("phone_2").style.display="none";
+        document.getElementById("p_phone").style.color="#FF0076";
+        document.getElementById("p_phone").style.fontWeight="bolder";
+      }
+      function dentro_tv() {
+        document.getElementById("tv").style.display = "none";
+        document.getElementById("tv_2").style.display="inline-block";
+        document.getElementById("p_tv").style.color="white";
+        document.getElementById("p_tv").style.fontWeight="bolder";
+        document.getElementById("p_tv").style.textDecoration="none";
+      }
+      function fuera_tv() {
+        document.getElementById("tv").style.display = "inline-block";
+        document.getElementById("tv_2").style.display="none";
+        document.getElementById("p_tv").style.color="#FF0076";
+        document.getElementById("p_tv").style.fontWeight="bolder";
+      }
+      function dentro_games() {
+        document.getElementById("games").style.display = "none";
+        document.getElementById("games_2").style.display="inline-block";
+        document.getElementById("p_games").style.color="white";
+        document.getElementById("p_games").style.fontWeight="bolder";
+        document.getElementById("p_games").style.textDecoration="none";
+      }
+      function fuera_games() {
+        document.getElementById("games").style.display = "inline-block";
+        document.getElementById("games_2").style.display="none";
+        document.getElementById("p_games").style.color="#FF0076";
+        document.getElementById("p_games").style.fontWeight="bolder";
+      }
+      function dentro_audio() {
+        document.getElementById("audio").style.display = "none";
+        document.getElementById("audio_2").style.display="inline-block";
+        document.getElementById("p_audio").style.color="white";
+        document.getElementById("p_audio").style.fontWeight="bolder";
+        document.getElementById("p_audio").style.textDecoration="none";
+      }
+      function fuera_audio() {
+        document.getElementById("audio").style.display = "inline-block";
+        document.getElementById("audio_2").style.display="none";
+        document.getElementById("p_audio").style.color="#FF0076";
+        document.getElementById("p_audio").style.fontWeight="bolder";
+      }
+      function dentro_electrodomesticos() {
+        document.getElementById("electro").style.display = "none";
+        document.getElementById("electro_2").style.display="inline-block";
+        document.getElementById("p_electro").style.color="white";
+        document.getElementById("p_electro").style.fontWeight="bolder";
+        document.getElementById("p_electro").style.textDecoration="none";
+      }
+      function fuera_electrodomesticos() {
+        document.getElementById("electro").style.display = "inline-block";
+        document.getElementById("electro_2").style.display="none";
+        document.getElementById("p_electro").style.color="#FF0076";
+        document.getElementById("p_electra").style.fontWeight="bolder";
+      }
+      function dentro_bebes() {
+        document.getElementById("bebes").style.display = "none";
+        document.getElementById("bebes_2").style.display="inline-block";
+        document.getElementById("p_bebes").style.color="white";
+        document.getElementById("p_bebes").style.fontWeight="bolder";
+        document.getElementById("p_bebes").style.textDecoration="none";
+      }
+      function fuera_bebes() {
+        document.getElementById("bebes").style.display = "inline-block";
+        document.getElementById("bebes_2").style.display="none";
+        document.getElementById("p_bebes").style.color="#FF0076";
+        document.getElementById("p_bebes").style.fontWeight="bolder";
+      }
+      function dentro_joyas() {
+        document.getElementById("joyas").style.display = "none";
+        document.getElementById("joyas_2").style.display="inline-block";
+        document.getElementById("p_joyas").style.color="white";
+        document.getElementById("p_joyas").style.fontWeight="bolder";
+        document.getElementById("p_joyas").style.textDecoration="none";
+      }
+      function fuera_joyas() {
+        document.getElementById("joyas").style.display = "inline-block";
+        document.getElementById("joyas_2").style.display="none";
+        document.getElementById("p_joyas").style.color="#FF0076";
+        document.getElementById("p_joyas").style.fontWeight="bolder";
+      }
+      function dentro_makeup() {
+        document.getElementById("makeup").style.display = "none";
+        document.getElementById("makeup_2").style.display="inline-block";
+        document.getElementById("p_makeup").style.color="white";
+        document.getElementById("p_makeup").style.fontWeight="bolder";
+        document.getElementById("p_makeup").style.textDecoration="none";
+      }
+      function fuera_makeup() {
+        document.getElementById("makeup").style.display = "inline-block";
+        document.getElementById("makeup_2").style.display="none";
+        document.getElementById("p_makeup").style.color="#FF0076";
+        document.getElementById("p_makeup").style.fontWeight="bolder";
+      }
+      function dentro_sport() {
+        document.getElementById("sport").style.display = "none";
+        document.getElementById("sport_2").style.display="inline-block";
+        document.getElementById("p_sport").style.color="white";
+        document.getElementById("p_sport").style.fontWeight="bolder";
+        document.getElementById("p_sport").style.textDecoration="none";
+      }
+      function fuera_sport() {
+        document.getElementById("sport").style.display = "inline-block";
+        document.getElementById("sport_2").style.display="none";
+        document.getElementById("p_sport").style.color="#FF0076";
+        document.getElementById("p_sport").style.fontWeight="bolder";
+      }
+      function dentro_musica() {
+        document.getElementById("musica").style.display = "none";
+        document.getElementById("musica_2").style.display="inline-block";
+        document.getElementById("p_musica").style.color="white";
+        document.getElementById("p_musica").style.fontWeight="bolder";
+        document.getElementById("p_musica").style.textDecoration="none";
+      }
+      function fuera_musica() {
+        document.getElementById("musica").style.display = "inline-block";
+        document.getElementById("musica_2").style.display="none";
+        document.getElementById("p_musica").style.color="#FF0076";
+        document.getElementById("p_musica").style.fontWeight="bolder";
+      }
+      function dentro_herramientas() {
+        document.getElementById("herramientas").style.display = "none";
+        document.getElementById("herramientas_2").style.display="inline-block";
+        document.getElementById("p_herramientas").style.color="white";
+        document.getElementById("p_herramientas").style.fontWeight="bolder";
+        document.getElementById("p_herramientas").style.textDecoration="none";
+      }
+      function fuera_herramientas() {
+        document.getElementById("herramientas").style.display = "inline-block";
+        document.getElementById("herramientas_2").style.display="none";
+        document.getElementById("p_herramientas").style.color="#FF0076";
+        document.getElementById("p_herramientas").style.fontWeight="bolder";
+      }
+
+      $('#myTab a').on('click', function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+      </script>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

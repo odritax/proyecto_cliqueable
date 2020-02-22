@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resumen Compra</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <script src="js/csi.min.js"></script><!---HTML DENTRO DE HTML--> 
+  </head>
+  <body>
+      <!--NAVBAR-->
+      <div data-include="navbar.html"></div>
+      <!-- resumen compra-->   
+      <div class="container">
+        <div class="py-5 text-center">
+          <h2>Resumen de Compra</h2>
+          <p class="lead">Completa el formulario de dirección de envío y selecciona tu medio de pago favorito para finalizar la compra</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-muted">Tu carrito</span>
+              <span class="badge badge-secondary badge-pill">1</span>
+            </h4>
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Notebook MSI</h6>
+                  <small class="text-muted">OFERTA Notebook Gamer MSI</small>
+                </div>
+                <span class="text-muted">$329.990</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Costo de Envío</h6>
+                  <small class="text-muted">Costo de envío a todo Chile</small>
+                </div>
+                <span class="text-muted">$4.990</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between bg-light">
+                <div class="text-success">
+                  <h6 class="my-0">Código Descuento</h6>
+                  <small></small>
+                </div>
+                <span class="text-success">0</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Total (CLP)</span>
+                <strong>$334.980</strong>
+              </li>
+            </ul>
+            <form class="card p-2">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Código Promoción">
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-outline-success">Canjear</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Dirección de Envío</h4>
+            <form class="needs-validation" novalidate="">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">Nombre</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">Apellido</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                </div>
+              </div>
+
+      
+              <div class="mb-3">
+                <label for="email">Email <span class="text-muted">(Opcional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="tu@email.com">
+              </div>
+      
+              <div class="mb-3">
+                <label for="address">Derección</label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Calle" required="">
+              </div>
+      
+              <div class="mb-3">
+                <label for="address2">Derección 2 <span class="text-muted">(Opcional)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="Departamento...">
+              </div>
+      
+              <div class="row">
+                <div class="col-md-5 mb-3">
+                  <label for="country">País</label>
+                  <select class="custom-select d-block w-100" id="country" required="">
+                    <option value="">Seleccionar País</option>
+                    <option>Chile</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="state">Región</label>
+                  <select class="custom-select d-block w-100" id="state" required="">
+                    <option value="">Seleccionar Región...</option>
+                    <option>V Región</option>
+                    <option>IV Región</option>
+                    <option>III Región</option>
+                    <option>II Región</option>
+                    <option>I Región</option>
+                    <option>Región Metropolitana</option>
+                  </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="zip">Código Postal</label>
+                  <input type="text" class="form-control" id="zip" placeholder="" required="">
+                </div>
+              </div>
+              <hr class="mb-4">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="same-address">
+                <label class="custom-control-label" for="same-address">Confirmo que la dirección de envío es correcta</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="save-info">
+                <label class="custom-control-label" for="save-info">Guardar dirección de envío</label>
+              </div>
+              <hr class="mb-4">
+      
+              <h4 class="mb-3">Medios de Pago</h4>
+      
+              <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                  <input id="webpay" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                  <label class="custom-control-label" for="webpay">WebPay</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="khipu" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                  <label class="custom-control-label" for="khipu">Khipu</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                  <label class="custom-control-label" for="paypal">PayPal</label>
+                </div>
+              </div>
+              <hr class="mb-4">
+              <a href="webpay_credito.html" class="btn btn-mejorado">Continuar para Finalizar</a><br><br>
+            </form>
+          </div>
+            </div>
+         
+      </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

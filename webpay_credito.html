@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mercado</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <script src="js/csi.min.js"></script><!---HTML DENTRO DE HTML--> 
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <div data-include="navbar.html"></div>  
+    <!-- Finalizar compra-->   
+    <div class="container">
+      <div class="py-5 text-center">
+        <h2>Finalizar Compra Webpay Crédito</h2>
+        <p class="lead">Completa los datos de pago finalizar la compra</p>
+      </div>
+ 
+      <div class="row" id="tarjeta">
+
+        <div    class="col-lg-5 col-md-5 col-sm-12 col-12 scene scene--card">
+          <div class="cards">
+            <div class="card__face card__face--front">
+                <img src="img/front card.png" id="credit-card" alt="">
+                <div class="form-credit-card-front">
+                  <label id="number_cc"></label>
+                  <label id="date_cc"></label>
+                  <label id="name_cc"></label>
+              </div>
+            </div>
+            <div  class="card__face card__face--back">
+              <img src="img/back card.png" id="credit-card" alt="">
+              <div class="form-credit-card-back">
+                <label id="cv_cc"></label>
+            </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-12 col-12" id="form-input-cc">
+          <small>Número Tarjeta</small>
+          <input type="text" class="form-control" onkeyup="txt_number_cc();" id="cc-number"  maxlength="16" placeholder="Número de la Tarjeta">
+          <small>Fecha Vencimiento</small>
+          <input type="month" class="form-control" onchange="txt_date_cc();" id="cc-expiration" placeholder="" required="">
+          <small>Nombre completo como se muestra en la tarjeta</small>
+          <input type="text" class="form-control" onkeyup="txt_name_cc();" id="cc-name" placeholder="Nombre en la Tarjeta" required="">
+          <small>CV</small>
+          <input type="text" class="form-control" maxlength="3" onmouseover="flip_back();" onmouseout="flip_front()"onkeyup="txt_cv_cc();" id="cc-cvv" placeholder="CV" required="">          
+          <br><a href="graciasporcomprar.html" class=" btn btn-mejorado center-block">Pagar</a><br><br>
+        </div>
+        </div>
+      </div>
+    </div>
+        <!--REDES SOCIALES-->
+        <div data-include="footer.html"></div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      function txt_number_cc(){
+      var texto= document.getElementById('cc-number').value;
+      var texto_2=texto.replace(/\s/g, '').replace(/([0-9]{4})/g, '$1 ');
+      document.getElementById('number_cc').innerHTML=texto_2;
+      }
+      function txt_date_cc(){
+      var texto= document.getElementById('cc-expiration').value;
+      var texto_2=texto.replace(/^(\d{4})-(\d{2})$/g,'$2/$1');
+      document.getElementById('date_cc').innerHTML=texto_2;
+      }
+      function txt_name_cc(){
+      var texto= document.getElementById('cc-name').value;
+      document.getElementById('name_cc').innerHTML=texto;
+      }
+      function txt_cv_cc(){
+      var texto= document.getElementById('cc-cvv').value;
+      document.getElementById('cv_cc').innerHTML=texto;
+
+      }
+        function flip_front(){
+        var card = document.querySelector('.cards');
+      card.style.transform='rotateY(360deg)';
+      }
+      function flip_back(){
+        var card = document.querySelector('.cards');
+      card.style.transform='rotateY(180deg)';
+      }
+    </script>
+  </body>
+</html>

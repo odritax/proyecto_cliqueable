@@ -1,0 +1,429 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.container-fluid{
+    padding: 0;
+    margin: 0;
+}
+.btn-mejorado{ 
+    color:white;
+    border-color: #ff0076;
+    background-color: #ff0076;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-weight: bolder;
+    
+}
+.btn-mejorado:hover{
+    background-color: transparent;
+    border-color: #ff0076;
+    color:#ff0076;
+    font-weight: bolder;
+}
+.btn-mejorado-2{ 
+    color:#ff0076;
+    border-color: #ff0076;
+    background-color: transparent;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-weight: bolder;
+    
+}
+.btn-mejorado-2:hover{
+    background-color: #ff0076;
+    border-color: #ff0076;
+    color:white;
+    font-weight: bolder;
+}
+/*NAVBAR*/
+.navbar-moradito{
+background-image: linear-gradient(to right,#311e96 ,#231769) !important;
+padding: 20px;
+}
+#nav-uls{
+    margin-right: 30px;
+}
+.nav-link-2 {
+    color:white;
+    font-size: 11pt;
+    margin-left: 20px;
+    font-weight: bolder;
+   
+}
+.nav-link-2:hover {
+    color:#ff0076;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.navbar-toggler-icon{
+    color: white;
+}
+.nav-link {
+    color:#ff0076;
+    font-size:11pt;
+}
+.close{
+   position: absolute;
+   right:10px;
+}
+#buscador{
+    width: 40%;
+    padding-left: 30px;
+    transition: width 0.4s ease-in-out;
+}
+#buscador:focus{
+    width: 100%;
+}
+
+.popito {
+    float: left;
+    margin-left: 5px;
+    margin-top: -28px;
+    position: relative;
+    z-index: 2;
+    color:#231769;
+
+}
+
+/*INDEX*/
+#home {
+    background-color:#e6e6fa;
+    padding:25px 80px;
+    text-align: center;
+}
+
+#titulo_home{
+    color: #311e96;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 20pt;
+}
+.cabecera {
+    color:#ff0076; 
+    font-weight: bolder;
+    text-align: center;
+    font-size: 25pt;
+    padding: 30px;
+}
+.category{
+    text-align: center;
+    margin: 20px;
+}
+.categoria_link {
+    color: #ff0076;
+    font-weight: bolder;  
+}
+.categoria_link:hover {
+    text-decoration: none;
+
+}
+.efecto_categoria {
+    padding: 20px;
+}
+.efecto_categoria:hover{
+    background-color: #2E2EFE;
+}
+#medio_pago{
+    text-align: center;
+    background-color: #e6e6fa;
+    
+}
+.medio_pago{
+ 
+    padding: 20px 10px;
+    margin:25px 15px ;
+    border-radius: 10px;
+}
+
+  #ofertas{
+     text-align: center;
+     background-color: #311e96;
+  }
+  .ofertas{
+      margin: 15px 25px;
+      text-align: center;
+      background-color: #311e96;
+  }
+  .badge-propia {
+      background-color: #311e96;
+      color: white;
+  }
+  .card{
+      margin: 25px 0;
+  }
+  #titulo_oferta{
+      color: white;
+      font-size: 25pt;
+      padding: 20px;
+  }
+  .zoom {
+    transition: transform .2s;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+  }
+  #medios_pago{
+    background-color:#e6e6fa;
+  }
+  footer{
+      background-image: linear-gradient(to right,#311e96 ,#231769) !important;
+      padding: 20px 40px;
+      color:white;
+      font-size: 1rem;
+      text-align: justify;
+  }
+  footer a {
+      color: white;
+      font-size: 10pt;  
+  }
+  footer p {
+      margin-left: 50%;
+      font-size: 8pt;
+  }
+  .fa-3x{
+      color: white;
+  }
+
+#titulo_medios_pago {
+    color:#ff0076;
+    font-weight: bolder;
+    font-size: 2rem;
+    padding:20px 0;
+
+}
+#imagen_medios_pago {
+    position: relative;
+    top:-35px;
+    left: 20px;
+}
+#total{
+    margin-right:5%;
+    font-size: 16pt;
+    color:#ff0076;
+}
+#pagar{
+    display: inline;
+}
+/*/////////////////////////////////////////////PRODUCTOS 1 y 2 //////////////////////////////////////////////////////*/
+.jumbotron{
+    margin-bottom: 0;
+}
+#ver-producto{
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.carousel-inner img {
+    width: 100%;
+    max-height: 390px;
+}
+.img_carrusel{
+    width: 30%;
+}
+.checked {
+    color: orange;
+  }
+  /*/////////////////////////////////////////////FINALIZAR COMPRA //////////////////////////////////////////////////////*/
+  #credit-card{
+      width: 100%;
+  }
+  .form-credit-card-front{
+    position: absolute;
+    top:50%;
+    left: 10%;
+    width: 80%;
+  }
+  .form-credit-card-back{
+    position: absolute;
+    top:40%;
+    left: 10%;
+    width: 80%;
+  }
+  .form-credit-card-back,.form-credit-card-front label{
+      color: black;
+      font-size: 12pt;
+      display: block;
+  }
+  #cc-expiration , #cc-cvv{
+      width: 20%;
+  }
+
+.scene {
+  width: 40%;
+  margin-bottom: 63%;
+}
+#form-input-cc{
+    position: static;
+}
+.cards {
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.card__face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.card__face--back {
+  transform: rotateY(180deg);
+}
+  /*/////////////////////////////////////////////GRACIAS POR SU COMPRA //////////////////////////////////////////////////////*/
+#check{
+    width: 150px;
+}
+  /*/////////////////////////////////////////////LISTA PRODUCTOS//////////////////////////////////////////////////////*/
+.media{
+    border: 1px solid rgba(0,0,0,.125);;
+    margin-bottom: 10px;
+
+}
+#lista-producto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+#lista-producto p {
+  text-align: justify;
+  padding-right: 30px;
+}
+.img_list_product{
+    width: 150px;
+}
+.lista_productos a {
+    text-decoration: none;
+    color:grey;  
+}
+/*////////////////////////////EXTRA SMALL (CELULAR)////////////////////////////////*/
+@media screen and (min-width: 300px) and (max-width: 576px) {
+     /*INDEX*/
+
+    #home {
+        padding-bottom: 0;
+    }
+    #buscador{
+        margin-top: 10px;
+    }
+    #titulo_home{
+        position: relative;
+        top: -120px;
+        font-size: 16pt;
+    }
+    .btn-mejorado{
+        display: block;
+        margin: 0 auto;
+    }
+    .btn-mejorado-2{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+  .card{
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 15px;
+  }
+    .badge-propia{
+        width: 100%;
+        font-size: 18px;
+    }
+    .btn-success{
+        width: 100%;
+        font-size: 16px;
+    }
+   #medios_pago h5,li,h4,p{
+       font-size: 10pt;
+       text-align: center;
+       list-style: none;
+   }
+   #titulo_medios_pago{
+        font-size: 16pt;
+        text-align: center;
+        position: relative;
+        top: -70px;
+   }
+   #texto_medios_pago {
+       position: relative;
+       top:-60px;
+   }
+   footer, footer a {
+    font-size: 10pt;
+}   
+ /*/////////////////////////////////////////////FINALIZAR COMPRA //////////////////////////////////////////////////////*/
+ 
+   .form-credit-card-back,.form-credit-card-front label{
+    font-size: 10pt;
+}
+  }
+  /*////////////////////////////SMALL(CELULAR)////////////////////////////////*/
+
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+
+       /*INDEX*/
+    #home {
+        padding-bottom: 0;
+    }
+    #buscador{
+        margin-top: 10px;
+    }
+    #titulo_home{
+        position: relative;
+        top: -120px;
+        font-size: 20pt;
+    }
+    .btn-mejorado{
+        display: block;
+        margin: 0 auto;
+    }
+    .btn-mejorado-2{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    #medios_pago h5,li,h4,p{
+        font-size: 14pt;
+        text-align: center;
+        list-style: none;
+    }
+    #titulo_medios_pago{
+         font-size: 20pt;
+         text-align: center;
+         position: relative;
+         top: -70px;
+    }
+    #texto_medios_pago {
+        position: relative;
+        top:-60px;
+    }
+    footer, footer a {
+        font-size: 11pt;
+    }
+  }
+
+   /*////////////////////////////MEDIUM(TABLET)////////////////////////////////*/
+
+   @media screen and (min-width: 769px) and (max-width: 992px) {
+          /*INDEX*/
+    #home {
+        padding-bottom: 0;
+    }
+    #titulo_home{
+        position: relative;
+        top: -120px;
+        font-size: 18pt;
+    }
+    .btn-mejorado{
+        display: inline-block;
+        font-size: 10pt;
+    }
+    .btn-mejorado-2{
+        display: inline-block;
+        font-size: 10pt;
+    }
+    #home_2{
+        margin-top: 50px;
+    }
+
+   
+}
+ 
